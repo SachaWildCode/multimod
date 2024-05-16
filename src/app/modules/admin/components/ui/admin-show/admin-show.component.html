@@ -1,0 +1,11 @@
+<!-- example.component.html -->
+<h3>Users Informations</h3>
+<div *ngFor="let singleUser of users">
+  <div>
+    <p>id : {{ singleUser.id }}</p>
+    <p>username : {{ singleUser.username }}</p>
+    <p>firstname : {{ singleUser.firstname }}</p>
+    <p>lastname : {{ singleUser.lastname }}</p>
+    <p>email : {{ singleUser.email }}</p>
+  </div>
+</div>

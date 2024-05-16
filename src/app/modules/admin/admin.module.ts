@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { AccountAdminComponent } from './pages/account-admin/account-admin.component';
-
+import { AdminLogicComponent } from './components/feature/admin-logic/admin-logic.component';
+import { AdminShowComponent } from './components/ui/admin-show/admin-show.component';
 
 @NgModule({
   declarations: [
-    AccountAdminComponent
+    AdminLogicComponent,
+    AdminShowComponent,
+    AccountAdminComponent,
   ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule
-  ]
+  imports: [CommonModule, AdminRoutingModule],
 })
-export class AdminModule { }
+export class AdminModule {}
