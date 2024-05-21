@@ -19,4 +19,12 @@ export class UserService {
         map((users: User[]) => users.find((user) => user.id === id) || users[0])
       );
   }
+  public getRandomUser() {
+    return this.http.get<User[]>('assets/json/users.json').pipe(
+      map((users: User[]) => {
+        const randomIndex = Math.floor(Math.random() * users.length);
+        return users[randomIndex];
+      })
+    );
+  }
 }

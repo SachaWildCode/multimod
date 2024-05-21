@@ -18,14 +18,25 @@ export class UserLogicComponent {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       const userId = params['id'];
-      this.UserService.getUserById(Number(userId)).subscribe({
-        next: (user) => {
-          this.user = user;
-        },
-        error: (err) => {
-          console.error('Error fetching user:', err);
-        },
-      });
+      if (userId) {
+        this.UserService.getUserById(Number(userId)).subscribe({
+          next: (user) => {
+            this.user = user;
+          },
+          error: (err) => {
+            console.error('Error fetching user:', err);
+          },
+        });
+      } else {
+        this.UserService.getRandomUser().subscribe({
+          next: (user) => {
+            this.user = user;
+          },
+          error: (err) => {
+            console.error('Error fetching random user:', err);
+          },
+        });
+      }
     });
   }
 }
