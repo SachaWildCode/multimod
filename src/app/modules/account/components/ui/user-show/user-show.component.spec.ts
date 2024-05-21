@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserShowComponent } from './admin-show.component';
+import { UserShowComponent } from './user-show.component';
 
 describe('UserShowComponent', () => {
   let component: UserShowComponent;
@@ -8,9 +8,10 @@ describe('UserShowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UserShowComponent],
-    }).compileComponents();
-
+      declarations: [UserShowComponent]
+    })
+    .compileComponents();
+    
     fixture = TestBed.createComponent(UserShowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

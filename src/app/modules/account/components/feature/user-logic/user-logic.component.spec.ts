@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserLogicComponent } from './admin-logic.component';
+import { UserLogicComponent } from './user-logic.component';
 
 describe('UserLogicComponent', () => {
   let component: UserLogicComponent;
@@ -8,9 +8,10 @@ describe('UserLogicComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UserLogicComponent],
-    }).compileComponents();
-
+      declarations: [UserLogicComponent]
+    })
+    .compileComponents();
+    
     fixture = TestBed.createComponent(UserLogicComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
